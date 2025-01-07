@@ -23,7 +23,7 @@ app.get('/hi', (req, res) => {
 
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://master.d39o0gekkt599.amplifyapp.com'],
+  origin: ['http://localhost:3000', 'https://master.dg66r4deg3c88.amplifyapp.com/'],
   allowedHeaders: ['Content-Type']
 }));
 
