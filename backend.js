@@ -15,6 +15,13 @@ const app = express();
 const port = process.env.PORT || 3001;
   
 // Enable CORS
+//hi message 
+app.get('/hi', (req, res) => {
+  res.send('Hello World');
+});
+
+
+
 app.use(cors({
   origin: ['http://localhost:3000', 'https://master.d39o0gekkt599.amplifyapp.com'],
   allowedHeaders: ['Content-Type']
@@ -366,7 +373,7 @@ app.post("/upload", upload.single('image'), async (req, res) => {
     const { class: className, name: studentName, folder } = req.body;
 
     if (!req.file) {
-      throw new Error('No file uploaded');
+      throw new Error('No file uploaded');  
     }
 
     // Upload image to S3
