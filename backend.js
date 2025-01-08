@@ -448,7 +448,7 @@ app.post("/upload", upload.single('image'), async (req, res) => {
 
 // Endpoint to fetch classes (new endpoint)
 
-
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+const PORT = 3001;
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server is running on port ${PORT}`);
 });
